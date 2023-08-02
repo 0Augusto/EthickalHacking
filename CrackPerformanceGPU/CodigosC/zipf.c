@@ -7,6 +7,30 @@ A função `generateZipfSequence()` também possui um loop `for` que executa `le
 
 Dado que a função `generateZipfSequence()` é chamada no programa principal com `sequenceLength` igual a 10, a ordem de complexidade total do código é O(length) = O(10) = O(1). Isso significa que a complexidade do código não aumenta à medida que o tamanho da sequência a ser gerada aumenta.
 
+O algoritmo Zipf é uma distribuição estatística que modela a frequência de ocorrência de elementos em um conjunto de dados. Essa distribuição é amplamente utilizada em diversas áreas, como análise de tráfego de rede, estudos de palavras-chave em motores de busca, distribuição de popularidade em redes sociais, entre outros.
+
+A distribuição Zipf é caracterizada por ter uma cauda longa, ou seja, alguns elementos são extremamente frequentes, enquanto a maioria dos elementos é raramente observada. Isso pode ser descrito pela função de densidade de probabilidade Zipf:
+
+P(k) = (1 / k^s) / H(n, s)
+
+Onde:
+
+P(k) é a probabilidade de ocorrência de um elemento k;
+s é o parâmetro da distribuição Zipf, conhecido como o parâmetro de forma (shape parameter). Ele controla a forma da distribuição e geralmente é um valor maior que 0;
+n é o número total de elementos no conjunto de dados;
+H(n, s) é a função harmônica generalizada, que é a soma dos termos da sequência harmônica generalizada definida por H(n, s) = 1^(-s) + 2^(-s) + 3^(-s) + ... + n^(-s).
+Quando o parâmetro s é pequeno (próximo de 0), a distribuição Zipf se assemelha a uma distribuição uniforme, onde todos os elementos têm aproximadamente a mesma frequência. À medida que s aumenta, a distribuição Zipf se torna mais inclinada, com alguns elementos se tornando muito mais frequentes do que outros.
+
+A seguir, vamos explicar como gerar uma distribuição Zipf utilizando o algoritmo da inversa da função acumulada (Inverse CDF method). Esse método é útil para gerar amostras de uma distribuição Zipf com base em uma distribuição uniforme aleatória entre 0 e 1.
+
+Passos para gerar uma amostra de uma distribuição Zipf:
+
+Calcule a constante H(n, s), que é a soma dos termos da sequência harmônica generalizada.
+Gere um número aleatório U entre 0 e 1 (distribuição uniforme).
+Calcule o índice k usando a fórmula: k = int(n * (U^(1/s)))
+O elemento k é uma amostra da distribuição Zipf.
+
+Observe que quanto maior o valor de s, mais "inclinada" será a distribuição Zipf, ou seja, haverá mais elementos raros e poucos elementos muito comuns. Por outro lado, valores menores de s tornam a distribuição mais uniforme, com frequências mais próximas entre os elementos.
 */
 
 

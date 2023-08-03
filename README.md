@@ -32,3 +32,5 @@ Lembre-se sempre de agir de maneira ética e respeitar as diretrizes dos program
 Esteja ciente de que a exploração de vulnerabilidades pode ser uma tarefa complexa e exigirá um alto nível de conhecimento em segurança da informação, programação, sistemas operacionais e arquitetura de hardware.
 
 Se você é novo na área de bug bounty ou em segurança da informação, recomendo estudar e praticar em ambientes controlados, como laboratórios de testes ou plataformas de treinamento em segurança. Dessa forma, você poderá adquirir as habilidades necessárias antes de se envolver em programas de recompensas de bug bounty.
+
+# Análise de é escalável, duplicar a o tamanho da senha e o tempo manter, significa que é mais escalável.
